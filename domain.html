@@ -1,0 +1,28 @@
+<html>
+	<head>
+		<title> Domain </title>
+	</head>
+	<body>
+		<form name="myForm" action="" onsubmit ="return validateForm()"method="POST">
+		NIM	<input type="text" name="nim" id="nim"> NIM harus 10 Digit <br>
+		Semester <input type="text" name="semester" id="semester"> Semester tidak boleh lebih dari 1 - 12 <br>
+			<input type="submit" value="Submit">
+		</form>
+		
+		<script type= "text/javascript">
+			function validateForm(){
+			var nim= document.myForm.nim.value;
+			var semester= document.myForm.semester.value;
+			if(nim.length != 10 ){
+				alert("NIM harus 10 Digit");
+				return false;
+			}
+			if((semester<1) || semester>12){
+				alert("Semester harus di isi 1-12");
+				return false;
+			}
+		}
+	</script>
+	
+	</body>
+</html>
